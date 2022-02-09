@@ -2,18 +2,49 @@
 <html lang="en">
 <head>
     <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            margin: 20px;
+            padding: 10px;
+        }
        ul li{
            list-style-type: none;
            float: left;
            height: 40px;
-           width: 150px;
+           width: 200px;
            background-color: royalblue;
            text-align: center;
            font-size: 22px;
            color: orange;
            border-radius: 20px;
            line-height: 40px;
+           opacity: 0.9;
+           }
+       ul li:hover{
+           background-color: green;
+           color: white;
+       }
 
+       ul li a{
+           text-decoration: none;
+           color: orange;
+       }
+       ul li ul {
+           display: none;
+       }
+       ul li:hover >ul{
+           display: block;
+       }
+       ul li ul li {
+           position: relative;
+       }
+       ul li ul li ul{
+           position: absolute;
+           margin-left: 200px;
+           top: 0px;
        }
        
     </style>
@@ -23,7 +54,27 @@
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About us</a></li>
-        <li> <a href="#">Courses</a></li>
+        <li> <a href="#">Courses</a>
+            <ul>
+                <li><a href="#">MS Office</a>
+                <ul>
+                    <li><a href="#">Word</a>/li>
+                    <li><a href="#">Excel</a></li>
+                    <li><a href="#">PowerPoint</a></li>
+                    <li><a href="#">Access</a></li>
+                </ul>
+                </li>
+                <li><a href="#">Web Development</a>
+                    <ul>
+                    <li><a href="#">Html</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tally</a></li>
+                
+            </ul>
+        </li>
         <li><a href="#">Careers</a></li>
         <li><a href="#">Contact us</a></li>
     </ul>
